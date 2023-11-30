@@ -89,26 +89,26 @@ function PrivacyPolicy({ status }) {
               </ul>
               <h2></h2>
               <p>
-                The Retro follows a standard procedure of using log files. These
+                The Retro follows a standard procedure of using log files. These
                 files log visitors when they visit websites. All hosting
-                companies do this and a part of hosting services' analytics. The
+                companies do this and a part of hosting services{"\'"} analytics. The
                 information collected by log files include internet protocol
                 (IP) addresses, browser type, Internet Service Provider (ISP),
                 date and time stamp, referring/exit pages, and possibly the
                 number of clicks. These are not linked to any information that
                 is personally identifiable. The purpose of the information is
-                for analyzing trends, administering the site, tracking users'
+                for analyzing trends, administering the site, tracking users{"\'"}
                 movement on the website, and gathering demographic information.
               </p>
               <br />
               <h2>Cookies and Web Beacons</h2>
               <p>
-                Like any other website, The Retro uses ‘cookies'. These cookies
-                are used to store information including visitors' preferences,
+                Like any other website, The Retro uses ‘cookies{"\'"}. These cookies
+                are used to store information including visitors{"\'"} preferences,
                 and the pages on the website that the visitor accessed or
-                visited. The information is used to optimize the users'
+                visited. The information is used to optimize the users{"\'"}
                 experience by customizing our web page content based on
-                visitors' browser type and/or other information.
+                visitors{"\'"} browser type and/or other information.
               </p>{" "}
               <br />
               <h2>Advertising Partners Privacy Policies</h2>
@@ -137,13 +137,13 @@ function PrivacyPolicy({ status }) {
               <ul>
                 <li>
                   <a href="https://policies.google.com/technologies/ads">
-                    Google's Policy
+                    Google{"\'"}s Policy
                   </a>
                 </li>
               </ul>
               <h2> Third-Party Privacy Policies</h2>
               <p>
-                The Retro's Privacy Policy does not apply to other advertisers
+                The Retro{"\'"}s Privacy Policy does not apply to other advertisers
                 or websites. Thus, we are advising you to consult the respective
                 Privacy Policies of these third-party ad servers for more
                 detailed information. It may include their practices and
@@ -156,7 +156,7 @@ function PrivacyPolicy({ status }) {
                 You can choose to disable cookies through your individual
                 browser options. To know more detailed information about cookie
                 management with specific web browsers, it can be found at the
-                browsers' respective websites. What Are Cookies?
+                browsers{"\'"} respective websites. What Are Cookies?
               </p>{" "}
               <br />
               <h2></h2>
@@ -166,7 +166,7 @@ function PrivacyPolicy({ status }) {
               </p>{" "}
               <br />
               <p>
-                Request that a business that collects a consumer's personal data
+                Request that a business that collects a consumer{"\'"}s personal data
                 disclose the categories and specific pieces of personal data
                 that a business has collected about consumers
               </p>{" "}
@@ -177,8 +177,8 @@ function PrivacyPolicy({ status }) {
               </p>{" "}
               <br />
               <p>
-                Request that a business that sells a consumer's personal data,
-                not sell the consumer's personal data.
+                Request that a business that sells a consumer{"\'"}s personal data,
+                not sell the consumer{"\'"}s personal data.
               </p>{" "}
               <br />
               <p>
@@ -235,7 +235,7 @@ function PrivacyPolicy({ status }) {
                 us.
               </p>
               <br />
-              <h2>Children's Information</h2>
+              <h2>Children{"\'"}s Information</h2>
               <p>
                 Another part of our priority is adding protection for children
                 while using the internet. We encourage parents and guardians to
@@ -262,7 +262,7 @@ function PrivacyPolicy({ status }) {
               <br />
               <p>
                 These terms and conditions outline the rules and regulations for
-                the use of The Retro's Website, located at TheRetro.com.
+                the use of The Retro{"\'"}s Website, located at TheRetro.com.
               </p>
               <br />
               <p>
@@ -275,14 +275,14 @@ function PrivacyPolicy({ status }) {
                 The following terminology applies to these Terms and Conditions,
                 Privacy Statement and Disclaimer Notice and all Agreements:
                 “Client”, “You” and “Your” refers to you, the person log on this
-                website and compliant to the Company's terms and conditions.
+                website and compliant to the Company{"\'"}s terms and conditions.
                 “The Company”, “Ourselves”, “We”, “Our” and “Us”, refers to our
                 Company. “Party”, “Parties”, or “Us”, refers to both the Client
                 and ourselves. All terms refer to the offer, acceptance and
                 consideration of payment necessary to undertake the process of
                 our assistance to the Client in the most appropriate manner for
-                the express purpose of meeting the Client's needs in respect of
-                provision of the Company's stated services, in accordance with
+                the express purpose of meeting the Client{"\'"}s needs in respect of
+                provision of the Company{"\'"}s stated services, in accordance with
                 and subject to, prevailing law of Netherlands. Any use of the
                 above terminology or other words in the singular, plural,
                 capitalization and/or he/she or they, are taken as
@@ -292,12 +292,12 @@ function PrivacyPolicy({ status }) {
               <h2>Cookies</h2>
               <p>
                 We employ the use of cookies. By accessing The Retro, you agreed
-                to use cookies in agreement with the The Retro's Privacy Policy.
+                to use cookies in agreement with the The Retro{"\'"}s Privacy Policy.
               </p>
               <br />
               <p>
                 Most interactive websites use cookies to let us retrieve the
-                user's details for each visit. Cookies are used by our website
+                user{"\'"}s details for each visit. Cookies are used by our website
                 to enable the functionality of certain areas to make it easier
                 for people visiting our website. Some of our
                 affiliate/advertising partners may also use cookies.
@@ -397,7 +397,7 @@ function PrivacyPolicy({ status }) {
                 in any way deceptive; (b) does not falsely imply sponsorship,
                 endorsement or approval of the linking party and its products
                 and/or services; and (c) fits within the context of the linking
-                party's site.
+                party{"\'"}s site.
               </p>{" "}
               <br />
               <p>
@@ -432,7 +432,7 @@ function PrivacyPolicy({ status }) {
                 link: (a) is not in any way deceptive; (b) does not falsely
                 imply sponsorship, endorsement or approval of the linking party
                 and its products or services; and (c) fits within the context of
-                the linking party's site.
+                the linking party{"\'"}s site.
               </p>
               <br />
               <p>
@@ -457,12 +457,12 @@ function PrivacyPolicy({ status }) {
                 <li>
                   By use of any other description of our Website being linked to
                   that makes sense within the context and format of content on
-                  the linking party's site.
+                  the linking party{"\'"}s site.
                 </li>
               </ul>{" "}
               <br />
               <p>
-                No use of The Retro's logo or other artwork will be allowed for
+                No use of The Retro{"\'"}s logo or other artwork will be allowed for
                 linking absent a trademark license agreement.
               </p>
               <h2>iFrames</h2>
@@ -487,7 +487,7 @@ function PrivacyPolicy({ status }) {
                 We reserve the right to request that you remove all links or any
                 particular link to our Website. You approve to immediately
                 remove all links to our Website upon request. We also reserve
-                the right to amen these terms and conditions and it's linking
+                the right to amen these terms and conditions and it{"\'"}s linking
                 policy at any time. By continuously linking to our Website, you
                 agree to be bound to and follow these linking terms and
                 conditions.

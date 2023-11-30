@@ -24,7 +24,7 @@ function HomeHeroSection() {
             <div className={homeherosection.home__hero__main__description}>
               <p>
                 Retro provide the best shoes for casual wear and sports. We
-                provide the authentic brand's shoes in very cheap price.
+                provide the authentic brand{"\'"}s shoes in very cheap price.
               </p>
               <p>
                 We Sell the best sports shoes which are durable and long

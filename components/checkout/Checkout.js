@@ -226,8 +226,8 @@ function Checkout({ user, cartItems, emptyCart }) {
             <div className={Styles.checkout__page__bill}>
               <h2>Your Order</h2>
               <div className={Styles.checkout__page__ordered__items}>
-                {cartItems.map((item) => (
-                  <div className={Styles.checkout__page__ordered__item}>
+                {cartItems.map((item, index) => (
+                  <div key={index} className={Styles.checkout__page__ordered__item}>
                     <div className={Styles.item__img}>
                       <img loading="lazy" src={item.img} alt="" />
                     </div>
