@@ -1,0 +1,20 @@
+.primary-button {
+  border: none;
+  background-color: $primary_red;
+  font-family: $secondary_font;
+  outline: none;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: black;
+  }
+  &:disabled,
+  &[disabled] {
+    color: #cccccc;
+    background-color: #666666;
+  }
+}

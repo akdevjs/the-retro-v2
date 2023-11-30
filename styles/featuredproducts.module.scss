@@ -1,0 +1,217 @@
+@import "imports";
+@import "../styles/global.scss";
+.featured__products__main {
+  font-family: $secondary_font;
+  color: white;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  // border:2px solid red;
+}
+.featured__products__child {
+  @media (min-width: 756px) {
+    align-items: center;
+  }
+  width: 89%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+// 1489
+.featured__productsmain__heading {
+  position: relative;
+  @media (max-width: 756px) {
+    width: 70rem;
+  }
+  @media (max-width: 600px) {
+    width: 30rem;
+  }
+
+  .featured__productsmain__heading__child {
+    display: flex;
+    align-items: flex-start;
+    @media (max-width: 756px) {
+      justify-content: center;
+      width: 100%;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding-top: 5rem;
+    }
+    @media (max-width: 656px) {
+    }
+    @media (max-width: 556px) {
+      justify-content: flex-start;
+      width: 100%;
+    }
+    img {
+      object-fit: contain;
+      width: 25rem;
+      @media (max-width: 756px) {
+        height: 80vh;
+        margin-bottom: 7rem;
+        width: 100%;
+      }
+    }
+  }
+}
+.featured__products__card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: $bg-cards;
+  padding: 15px;
+  width: 100%;
+  @media (max-width: 756px) {
+    max-width: 600px;
+    margin-left: 10px;
+  }
+}
+.featured__products__card__heading {
+  font-size: 2rem;
+  width: 100%;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  @media (max-width: 756px) {
+    font-size: 4rem;
+  }
+  @media (max-width: 456px) {
+    font-size: 2.5rem;
+  }
+}
+.featured__products__card__info {
+  display: flex;
+  width: 100%;
+  @media (max-width: 756px) {
+    flex-direction: column;
+  }
+
+  p {
+    font-size: 1.5rem;
+    @media (max-width: 756px) {
+      font-size: 2rem;
+    }
+    @media (max-width: 400px) {
+      font-size: 2rem;
+    }
+  }
+  .rating {
+    font-size: 2rem;
+    span {
+      font-size: 2rem;
+      font-weight: 300;
+      margin-left: 5px;
+    }
+  }
+  span {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+}
+.featured__products__main__products {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  @media (max-width: 756px) {
+    height: 100%;
+    justify-content: space-between;
+  }
+}
+.featured__products__card__row {
+  display: grid;
+  margin-left: 10px;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  @media (max-width: 756px) {
+    display: flex;
+    height: 100%;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.featured__products__card__info__img {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-right: 15px;
+  @media (max-width: 756px) {
+    margin-right: 0;
+  }
+
+  img {
+    width: 20rem;
+    @media (max-width: 756px) {
+      width: 50rem;
+      padding: 1rem;
+    }
+    @media (max-width: 456px) {
+      width: 35rem;
+    }
+    object-fit: contain;
+    height: 100%;
+  }
+}
+.featured__products__card__info__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 30rem;
+  justify-content: space-around;
+  @media (max-width: 756px) {
+    min-height: max-content;
+    justify-content: flex-start;
+  }
+  @media (max-width: 756px) {
+    font-weight: 200;
+  }
+  p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .buy__now__button {
+    @media (max-width: 756px) {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+    a {
+      &:hover {
+        color: white;
+      }
+    }
+    .primary-button {
+      &hover {
+        color: white;
+      }
+      @media (max-width: 756px) {
+        font-size: 3rem;
+        font-weight: 200;
+      }
+    }
+  }
+}
+
+.main_heading_img {
+  display: none;
+  @media (min-width: 600px) {
+    display: block;
+  }
+}
+.main_heading_img_mob {
+  display: none;
+  @media (max-width: 600px) {
+    display: block;
+  }
+}
+.primary_button {
+  @extend .primary-button;
+}

@@ -1,0 +1,225 @@
+@import "imports";
+@import "../styles/global.scss";
+.all_products_main {
+  a {
+    text-decoration: none;
+  }
+  margin-bottom: 50px;
+}
+
+.all_products_main_child {
+  width: 89%;
+  display: block;
+  margin: auto;
+  color: white;
+  font-family: $secondary_font;
+  display: flex;
+
+  svg {
+    color: white;
+    width: 3rem;
+    height: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+}
+.all_products_filter {
+  min-height: 100vh;
+  position: relative;
+  width: 30rem;
+  margin-right: 3rem;
+  @media (max-width: 420px) {
+    width: 20rem;
+  }
+}
+.all_products_filter_child {
+  position: sticky;
+  top: 0;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.all_products_filter_heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.all_products_filter_price {
+  .all_products_filter_price_range {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    input {
+      width: 48%;
+      font-size: 1.5rem;
+      outline: none;
+      border: none;
+      padding: 0.7rem;
+    }
+  }
+}
+.all_products_filter_section {
+  margin: 3rem 0rem;
+}
+.all_products_filter_size_range {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  .size {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.2s;
+    &:hover {
+      color: lightgray;
+    }
+  }
+}
+.all_products_filter_color_range {
+  display: flex;
+  flex-wrap: wrap;
+  .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 10px;
+    margin-top: 10px;
+    background: url("https://p.kindpng.com/picc/s/166-1667490_red-line-triangle-hd-png-download.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: color 0.2s;
+    &:hover {
+      opacity: 0.45;
+    }
+  }
+}
+.all_products_filter_brand_range {
+  display: flex;
+  flex-direction: column;
+  .brand {
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: color 0.2s;
+    &:hover {
+      color: lightgray;
+    }
+    input {
+      width: 1.5rem;
+      &:checked {
+        color: red;
+      }
+    }
+  }
+}
+.all_products_product_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px 20px;
+  @media (max-width: 420px) {
+    padding: 40px 20px;
+  }
+  img {
+    width: 100%;
+    margin-bottom: 20px;
+    object-fit: contain;
+    @media (max-width: 480px) {
+      width: 30rem;
+      margin-bottom: 10px;
+    }
+    @media (max-width: 360px) {
+      width: 25rem;
+      margin-bottom: 10px;
+    }
+    @media (max-width: 340px) {
+      width: 20rem;
+      margin-bottom: 10px;
+    }
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: lightgray;
+  }
+}
+.all_products_product_info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+
+  .product_name_brand {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  span {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+  h2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+.all_products_product_shipping {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  span {
+    font-weight: 300;
+  }
+}
+
+.all_products_grid {
+  display: grid;
+  gap: 25px;
+  width: 100%;
+  height: fit-content;
+  grid-template-columns: 1fr 1fr 1fr;
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+.all_products_grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.all_products_column > div {
+  /* change div to reference your elements you put in <Masonry> */
+  background: $bg_cards;
+  margin-bottom: 30px;
+  transition: 0.3s;
+  @media (min-width: 756px) {
+    &:hover {
+      background-color: #ffffff4d;
+      transform: scale(1.07);
+    }
+  }
+}

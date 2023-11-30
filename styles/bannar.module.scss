@@ -1,0 +1,124 @@
+@import "imports";
+@import "../styles/global.scss";
+.lul {
+  color: white;
+}
+.main__bannar {
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: $secondary_font;
+  margin-bottom: 100px;
+}
+.main__child {
+  width: 89%;
+  background: $bg_cards;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  @media (max-width: 762px) {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+  margin: 20px 0;
+}
+.img__main__bannar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    object-fit: contain;
+    width: 55rem;
+    @media (max-width: 400px) {
+      width: 45rem;
+    }
+  }
+}
+.sub__main__bannar {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    font-size: 4rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 5rem;
+    width: 55rem;
+    @media (max-width: 400px) {
+      width: 45rem;
+      font-size: 3rem;
+    }
+  }
+}
+.cre__bannar {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  min-width: 50rem;
+  @media (max-width: 400px) {
+    width: 45rem;
+    font-size: 4rem;
+  }
+
+  input {
+    font-size: 1.5rem;
+    padding: 1rem;
+    flex: 1;
+    width: 70%;
+    outline: none;
+    border: none;
+  }
+  button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12rem;
+    height: 5rem;
+    &:disabled,
+    &[disabled] {
+      background-color: red;
+    }
+  }
+}
+.message {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  bottom: 10rem;
+}
+
+.loader {
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border-radius: 50%;
+  position: relative;
+  animation: skLinRotate 1s ease-in-out infinite alternate;
+}
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: white;
+}
+@keyframes skLinRotate {
+  95%,
+  100% {
+    transform: rotate(840deg);
+  }
+}
+
+.primary_button {
+  @extend .primary-button;
+}

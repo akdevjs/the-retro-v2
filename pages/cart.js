@@ -1,9 +1,9 @@
+import Cart from "../components/cart/Cart";
 import Layout from "../components/common/Layout";
-import Home from "../components/home/Home";
 export default function HomePage() {
   return (
     <Layout>
-      <Home />
+      <Cart />
     </Layout>
   );
 }

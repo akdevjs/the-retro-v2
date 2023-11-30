@@ -1,0 +1,139 @@
+@import "imports";
+.home__hero__main {
+  @include flex_container;
+  width: 100%;
+}
+.home__hero__child__main {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  @media (max-width: 965px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.dummy_div_hero {
+  min-width: 25vw;
+  @media (max-width: 965px) {
+    display: none;
+  }
+}
+.home__hero__primary__heading {
+  @media (min-width: 965px) {
+    position: absolute;
+    z-index: 100;
+  }
+  @media (max-width: 965px) {
+    width: 100%;
+  }
+  h1 {
+    @include primary_heading(20rem);
+  }
+}
+
+.home__hero__shoe__image {
+  @include flex_container;
+  position: relative;
+  min-height: 40vw;
+  min-width: 40vw;
+  @media (max-width: 965px) {
+    width: 70rem;
+    height: 70rem;
+  }
+  @media (max-width: 420px) {
+    width: 50rem;
+    height: 50rem;
+  }
+  img {
+    min-height: 30vw;
+    min-width: 30vw;
+    @media (max-width: 965px) {
+      width: 70rem;
+      height: 70rem;
+    }
+    @media (max-width: 420px) {
+      width: 50rem;
+      height: 50rem;
+    }
+  }
+  background: url("../public/imgs/orange_ball_bg.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  img {
+    object-fit: contain;
+    overflow-x: hidden;
+    animation: shoe_translator 3s, shoe_rotator 10s ease-in infinite 3s;
+  }
+}
+.home__here__main_description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 965px) {
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+.home__hero__description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  @media (max-width: 965px) {
+    align-items: flex-start;
+    max-width: 55rem;
+  }
+}
+.home__hero__main__description {
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 965px) {
+    max-width: 55rem;
+    justify-content: flex-end;
+  }
+  gap: 3rem;
+  p {
+    @include primary_para;
+  }
+}
+.home__hero__top__line {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  p {
+    @include primary_para;
+  }
+  img {
+    width: 40rem;
+    object-fit: contain;
+  }
+}
+
+//Animations
+//Animation to slide the shoe
+@keyframes shoe_translator {
+  0% {
+    transform: translateX(-200%) rotate(-45deg) scale(0.7);
+  }
+  50% {
+    transform: translateX(0%) rotate(-4deg) scale(1.05);
+  }
+  10% {
+    transform: translateX(0%) rotate(0deg) scale(1);
+  }
+}
+
+//Animation to give a rotating float effect to the shoe
+@keyframes shoe_rotator {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(10deg) scale(0.96);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
