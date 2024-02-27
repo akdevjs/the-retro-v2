@@ -213,6 +213,17 @@ function Header({ cart, allShoes, user, logIn, logOut }) {
                 )}
               </button>
             </div>
+            <Link
+              style={{
+                textDecoration: "none",
+                margin: "0 2rem",
+                fontWeight: "300",
+              }}
+              className={headerStyle.primary_button}
+              href="/"
+            >
+              All Products
+            </Link>
           </div>
           <div className={headerStyle.cart__dummy__icon}>
             <Link
