@@ -220,7 +220,7 @@ function Header({ cart, allShoes, user, logIn, logOut }) {
                 fontWeight: "300",
               }}
               className={headerStyle.primary_button}
-              href="/"
+              href="/all-products"
             >
               All Products
             </Link>
