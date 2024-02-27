@@ -216,7 +216,6 @@ function Header({ cart, allShoes, user, logIn, logOut }) {
             <Link
               style={{
                 textDecoration: "none",
-                margin: "0 2rem",
                 fontWeight: "300",
               }}
               className={headerStyle.primary_button}
