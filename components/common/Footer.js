@@ -73,21 +73,21 @@ function Footer() {
           >
             <h2>Brands</h2>
             <div className={footerStyle.Services__section__footer__sub}>
-              <a target="_blank" href="https://www.adidas.com/us">
+              <Link href="/all-products?brand=Adidas">
                 <p>Adidas</p>
-              </a>
-              <a target="_blank" href="https://www.nike.com">
+              </Link>
+              <Link href="/all-products?brand=Nike">
                 <p>Nike</p>
-              </a>
-              <a target="_blank" href="https://www.underarmour.com/en-us/">
+              </Link>
+              <Link href="/all-products?brand=Under Armour">
                 <p>Under Armour</p>
-              </a>
-              <a target="_blank" href="https://us.puma.com/us/en">
+              </Link>
+              <Link href="/all-products?brand=Puma">
                 <p>Puma</p>
-              </a>
-              <a target="_blank" href="https://www.skechers.com">
+              </Link>
+              <Link href="/all-products?brand=Skechers">
                 <p>Skechers</p>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
