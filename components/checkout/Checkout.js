@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { emptyCartAPI } from "../../actions";
 import Styles from "../../styles/checkout.module.scss";
 const countries = require("./countries.json");
-const countries_code = require("./PhoneCode.json");
 function Checkout({ user, cartItems, emptyCart }) {
   const [country, setCountry] = useState("");
   const [countryName, setCountryName] = useState("");
@@ -14,7 +13,6 @@ function Checkout({ user, cartItems, emptyCart }) {
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [states, setStates] = useState("");
-  const [code, setCode] = useState("");
   const [mm, setMm] = useState("");
   const [yy, setYy] = useState("");
   const [cardnumber, setCardnumber] = useState("");
@@ -64,25 +62,12 @@ function Checkout({ user, cartItems, emptyCart }) {
       setDiscount(0);
     }
   };
-  const FindTheCountryCode = (val) => {
-    countries_code.forEach((code) => {
-      if (code.name === val) {
-        setCode(code.dial_code + " ");
-        console.log(code.dial_code);
-      }
-    });
-  };
-  const isStateStillNumeric = (val) => {
-    const n = val;
-    const ar = n.toString().split("");
-    return Number.isInteger(parseInt(ar[ar.length - 1]));
-  };
+
   //   handlers
   const handlecountry = (e) => {
     if (e.target.value !== "") {
       setCountry(e.target.value);
       setStates(JSON.parse(e.target.value).states);
-      FindTheCountryCode(JSON.parse(e.target.value).country_name);
       setCountryName(JSON.parse(e.target.value).country_name);
     }
   };
@@ -90,40 +75,25 @@ function Checkout({ user, cartItems, emptyCart }) {
     setState(e.target.value);
   };
   const handlephone = (e) => {
-    if (isStateStillNumeric(e.target.value)) {
-      setPhone(e.target.value);
-    } else if (phone.length != 1) {
-      setPhone(phone + "");
-    } else {
-      setPhone("");
-    }
+    let value = e.target.value.replace(/\D/g, "");
+    value = value.slice(0, 14);
+    setPhone(value);
   };
   const handlecardnumber = (e) => {
-    if (isStateStillNumeric(e.target.value)) {
-      setCardnumber(e.target.value);
-    } else if (cardnumber.length != 1) {
-      setCardnumber(cardnumber + "");
-    } else {
-      setCardnumber("");
-    }
+    let value = e.target.value.replace(/\D/g, "");
+    value = value.slice(0, 16);
+    setCardnumber(value);
   };
   const handlecardcvc = (e) => {
-    if (isStateStillNumeric(e.target.value) && e.target.value.length < 5) {
-      setCvc(e.target.value);
-    } else if (cvc.length != 1) {
-      setCvc(cvc + "");
-    } else {
-      setCvc("");
-    }
+    let value = e.target.value.replace(/\D/g, "");
+    value = value.slice(0, 3);
+
+    setCvc(value);
   };
   const handlepostalcode = (e) => {
-    if (isStateStillNumeric(e.target.value) && e.target.value.length < 5) {
-      setPostalCode(e.target.value);
-    } else if (postalCode.length != 1) {
-      setPostalCode(postalCode + "");
-    } else {
-      setPostalCode("");
-    }
+    let value = e.target.value.replace(/\D/g, "");
+    value = value.slice(0, 5);
+    setPostalCode(value);
   };
   const handlecardexmonth = (e) => {
     setMm(e.target.value);
@@ -139,7 +109,7 @@ function Checkout({ user, cartItems, emptyCart }) {
       First_Name: firstName,
       Last_Name: lastName,
       Phone: phone,
-      Adress: `${address},${city},${state},${countryName},${postalCode}`,
+      Adress: `${address}, ${city}, ${state}, ${countryName}, ${postalCode}`,
       price: subtotalPrice - discount + 20,
     });
   };
@@ -190,21 +160,7 @@ function Checkout({ user, cartItems, emptyCart }) {
               <div className={Styles.adress}>
                 <h3>Address</h3>
 
-                <span>
-                  {orderconfrim &&
-                    orderConfrimDetail.Adress.split(",")[0] +
-                      ", " +
-                      orderConfrimDetail.Adress.split(",")[1]}
-                </span>
-                <br />
-                <span>
-                  {orderconfrim &&
-                    orderConfrimDetail.Adress.split(",")[2] +
-                      ", " +
-                      orderConfrimDetail.Adress.split(",")[3] +
-                      ", " +
-                      orderConfrimDetail.Adress.split(",")[4]}
-                </span>
+                <span>{orderconfrim && orderConfrimDetail.Adress}</span>
               </div>
             </div>
           </div>
@@ -227,7 +183,10 @@ function Checkout({ user, cartItems, emptyCart }) {
               <h2>Your Order</h2>
               <div className={Styles.checkout__page__ordered__items}>
                 {cartItems.map((item, index) => (
-                  <div key={index} className={Styles.checkout__page__ordered__item}>
+                  <div
+                    key={index}
+                    className={Styles.checkout__page__ordered__item}
+                  >
                     <div className={Styles.item__img}>
                       <img loading="lazy" src={item.img} alt="" />
                     </div>
@@ -320,7 +279,6 @@ function Checkout({ user, cartItems, emptyCart }) {
                       Phone <span style={{ color: "red" }}>*</span>
                     </label>
                     <div className={Styles.input}>
-                      <span>{code}</span>
                       <input
                         required
                         value={phone}
